@@ -9,30 +9,117 @@
                         </a>
                     </div> <!-- /.logo -->
                 </div> <!-- /.col-md-4 -->
-  
+
             </div> <!-- /.row -->
         </div> <!-- /.main-header -->
-  
+
     </div> <!-- /.container -->
   </div> <!-- /.site-header -->
-  
+
   <div class="page-top" id="templatemo_events">
   </div> <!-- /.page-header -->
   <br/>
-  <div class="appContent">
-      <h1>Amadeus search</h1>
+  <div >
       
-      <form name="frmSearch" id="frmSearch" onsubmit="loadFlights('https://devoxx2021-redhat-amadeus-contest-api.comwork.io'); return false;">
-          Origin: <select id="origin">
-          <option value="CDG">Paris CDG</option><option value="ORY">Paris Orly</option><option value="TUN">Tunis</option><option value="CMN">Casablanca</option><option value="CAI">Cairo</option><option value="MED">Madinah</option><option value="JED">Djeddah</option><option value="RUH">Riyadh</option><option value="LCY">London</option><option value="SXF">Berlin</option><option value="SYD">Sydney</option><option value="BKK">Bankok</option><option value="SIN">Singapor</option><option value="HKG">Hong Kong</option>                </select>&nbsp;
-          
-          Destination: <select id="destination">
-          <option value="CDG">Paris CDG</option><option value="ORY">Paris Orly</option><option value="TUN">Tunis</option><option value="CMN">Casablanca</option><option value="CAI">Cairo</option><option value="MED">Madinah</option><option value="JED">Djeddah</option><option value="RUH">Riyadh</option><option value="LCY">London</option><option value="SXF">Berlin</option><option value="SYD">Sydney</option><option value="BKK">Bankok</option><option value="SIN">Singapor</option><option value="HKG">Hong Kong</option>                </select>&nbsp;
-          
-          Departure date: <select id="departure_date">
-          <option value="2022-06-07">2022-06-07</option><option value="2022-06-08">2022-06-08</option><option value="2022-06-09">2022-06-09</option><option value="2022-06-10">2022-06-10</option><option value="2022-06-11">2022-06-11</option><option value="2022-06-12">2022-06-12</option><option value="2022-06-13">2022-06-13</option><option value="2022-06-14">2022-06-14</option><option value="2022-06-15">2022-06-15</option><option value="2022-06-16">2022-06-16</option>                </select>&nbsp;
-          <input name="count" type="button" class="btn btn-primary" value="Search" onclick="loadFlights('https://devoxx2021-redhat-amadeus-contest-api.comwork.io');">
-      </form>
-      <br />
-      <div id="contentTable"></div>
+     
+      <section class="vh-100">
+        <div class="container-fluid h-custom">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                class="img-fluid" alt="Sample image">
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+              <form>
+                <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+                  <p class="lead fw-normal mb-0 me-3">Amadeus Search </p>
+                  
+                </div>
+                  
+                  <div class="form-outline mb-4">
+
+
+      
+        Origin: <select id="origin" >
+        <option value="CDG" ng-click="switchorigin('CDG')">Paris CDG</option>
+        <option value="ORY" ng-click="switchorigin('ORY')">Paris Orly</option>
+        <option value="TUN" ng-click="switchorigin('TUN')">Tunis</option>
+        <option value="CMN" ng-click="switchorigin('CMN')">Casablanca</option>
+        <option value="CAI" ng-click="switchorigin('CAI')">Cairo</option>
+        <option value="MED" ng-click="switchorigin('MED')">Madinah</option>
+        <option value="JED" ng-click="switchorigin('JED')">Djeddah</option>
+        <option value="RUH" ng-click="switchorigin('RUH')">Riyadh</option>
+        <option value="LCY" ng-click="switchorigin('LCY')">London</option>
+        <option value="SXF" ng-click="switchorigin('SXF')" >Berlin</option>
+        <option value="SYD" ng-click="switchorigin('SYD')">Sydney</option>
+        <option value="BKK" ng-click="switchorigin('BKK')">Bankok</option>
+        <option value="SIN" ng-click="switchorigin('SIN')">Singapor</option>
+        <option value="HKG" ng-click="switchorigin('HKG')">Hong Kong</option>
+                      </select><br/>
+
+        Destination: <select id="destination"  >
+        <option value="CDG" ng-click="switchdestination('CDG')">Paris CDG</option>
+        <option value="ORY" ng-click="switchdestination('ORY')">Paris Orly</option>
+        <option value="TUN" ng-click="switchdestination('TUN')">Tunis</option>
+        <option value="CMN" ng-click="switchdestination('CMN')">Casablanca</option>
+        <option value="CAI" ng-click="switchdestination('CAI')">Cairo</option>
+        <option value="MED" ng-click="switchdestination('MED')">Madinah</option>
+        <option value="JED" ng-click="switchdestination('JED')">Djeddah</option>
+        <option value="RUH" ng-click="switchdestination('RUH')">Riyadh</option>
+        <option value="LCY" ng-click="switchdestination('LCY')">London</option>
+        <option value="SXF" ng-click="switchdestination('SXF')">Berlin</option>
+        <option value="SYD" ng-click="switchdestination('SYD')">Sydney</option>
+        <option value="BKK" ng-click="switchdestination('BKK')">Bankok</option>
+
+        <option value="SIN" ng-click="switchdestination('SIN')">Singapor</option>
+        <option value="HKG" ng-click="switchdestination('HKG')">Hong Kong</option>                </select><br/>;
+
+        Departure date: <select id="departure_date" >
+        <option value="2022-06-07" ng-click="switchdate('2022-06-07')">2022-06-07</option>
+        <option value="2022-06-08" ng-click="switchdate('2022-06-08')">2022-06-08</option>
+        <option value="2022-06-09" ng-click="switchdate('2022-06-09')">2022-06-09</option>
+        <option value="2022-06-10" ng-click="switchdate('2022-06-10')">2022-06-10</option>
+        <option value="2022-06-11" ng-click="switchdaten('2022-06-11')">2022-06-11</option>
+        <option value="2022-06-12" ng-click="switchdate('2022-06-12')">2022-06-12</option>
+        <option value="2022-06-13" ng-click="switchdate('2022-06-13')">2022-06-13</option>
+        <option value="2022-06-14" ng-click="switchdate('2022-06-14')">2022-06-14</option>
+        <option value="2022-06-15" ng-click="switchdate('2022-06-15')">2022-06-15</option>
+        <option value="2022-06-16" ng-click="switchdate('2022-06-16')">2022-06-16</option>                </select><br/>
+        <input  type="button" class="btn btn-primary" value="Search" onclick="getplaces()">
+        </div>
+    </form>
+
+</div>
+</div>
+</div>
+</section>
+
+
+
   </div>
+
+      <br />
+
+    <table >
+      <thead>
+          <tr>
+              <th> Departure</th>
+              <th> Arrival </th>
+              <th> Price</th>
+              <th>Class</th>
+
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor = "let flight of flight" >
+              <td> {{ flight.Departure }} </td>
+              <td> {{ flight.Arrival }} </td>
+              <td> {{ flight.price }} </td>
+              <td> {{ flight.class }} </td>
+             </tr>
+             </tbody>
+             </table>
+
+            
+
+
